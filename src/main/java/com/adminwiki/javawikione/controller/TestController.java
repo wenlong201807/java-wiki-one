@@ -30,13 +30,13 @@ public class TestController {
     public String hello() {
 
         // http://127.0.0.1:8881/hello
-        return "hello world!" + testHello;
+        return "hello world12367!" + testHello;
     }
 
     @PostMapping("/hello/post")
     public String helloPost(String name) {
 
         // http://127.0.0.1:8881/hello
-        return "Hello World! Post，" + name;
+        return "Hello World! Post app.running，" + name;
     }
 }
