@@ -1,7 +1,8 @@
 package com.adminwiki.javawikione.controller;
 
-import org.springframework.stereotype.Controller;
-import org.springframework.web.bind.annotation.*;
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
 //@Controller // 返回页面
 @RestController // 返回字符串
@@ -24,5 +25,12 @@ public class TestController {
 
         // http://127.0.0.1:8881/hello
         return "hello world!";
+    }
+
+    @PostMapping("/hello/post")
+    public String helloPost(String name) {
+
+        // http://127.0.0.1:8881/hello
+        return "Hello World! Post，" + name;
     }
 }
