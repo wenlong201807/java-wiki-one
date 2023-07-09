@@ -1,12 +1,15 @@
-package com.adminwiki.javawikione;
+package com.adminwiki.javawikione.config;
 
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.core.env.Environment;
 
-@SpringBootApplication
+//@ComponentScan({"com.adminwiki", "com.testPackage"}) // 添加多个指定的包，皆可扫描
+@ComponentScan("com.adminwiki") // 只扫描指定文件夹下的类
+@SpringBootApplication // 里面有个包 ComponentScan 会扫描子类
 public class JavaWikiOneApplication {
 
     private static final Logger LOG = LoggerFactory.getLogger(JavaWikiOneApplication.class);
